@@ -120,14 +120,14 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-10 xl:py-20">
       <div className="container">
-        <div className="max-w-[593px] w-full mx-auto mb-[60px]">
-          <h2 className="text-[60px] font-bangers leading-none text-white mb-8 max-w-[430px] w-full mx-auto">
-            The time is now,{" "}
-            <span className="text-spearmint">lets get you funded</span>
+        <div className="max-w-[593px] w-full mx-auto mb-10 xl:mb-[60px]">
+          <h2 className="text-heading2 max-w-[440px] w-full mx-auto">
+            The time is now, lets{" "}
+            <span className="text-spearmint">get you funded</span>
           </h2>
-          <p className="text-base leading-8 text-[rgba(255,255,255,0.8)] mb-10">
+          <p className="text-body mb-10">
             Accelerate your path to funding with clear, achievable goals. Use
             our capital to place your bets and{" "}
             <span className="text-spearmint">start winning today!</span>
@@ -135,47 +135,47 @@ const Pricing = () => {
         </div>
 
         <div className="max-w-[1164px] w-full mx-auto">
-          <ul className="grid grid-cols-5 gap-5 mb-8 max-w-[915px] w-full mx-auto">
-            {tabs.map((tab) => (
-              <li
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-border-transparent-white cursor-pointer relative ${
-                  activeTab === tab.id
-                    ? "bg-white-radial-gradient text-white"
-                    : "bg-custom-transparent-jaguar text-starDust"
-                }`}
-              >
-                {tab.label}
-                {tab.tag && (
-                  <span className="absolute -top-2 right-5 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
-                    {tab.tag}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <div className="overflow-y-auto mb-6">
+            <ul className="grid grid-cols-5 gap-5 max-w-[915px] pt-5 pb-2 min-w-[915px] w-full mx-auto">
+              {tabs.map((tab) => (
+                <li
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-border-transparent-white cursor-pointer relative ${activeTab === tab.id
+                      ? "bg-white-radial-gradient text-white"
+                      : "bg-custom-transparent-jaguar text-starDust"
+                    }`}
+                >
+                  {tab.label}
+                  {tab.tag && (
+                    <span className="absolute -top-2 right-5 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
+                      {tab.tag}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <div className="p-5 text-white">
-            <div className="grid grid-cols-3 gap-5">
+          <div className="py-5 lg:p-5 text-white overflow-y-auto">
+            <div className="grid grid-cols-3 gap-5 min-w-[915px] max-w-[915px] lg:max-w-full lg:min-w-full">
               {cardData[activeTab].map((card, index) => (
                 <div
                   key={index}
-                  className={`rounded-[20px] border p-8 text-center shadow-custom-green relative ${
-                    activeTab === 4 && index === 1
+                  className={`rounded-[20px] border p-5 xl:p-8 text-center shadow-custom-green relative ${activeTab === 4 && index === 1
                       ? "border-spearmint bg-custom-mix-two"
                       : "border-custom-transparent-mint-two bg-custom-mix"
-                  }`}
+                    }`}
                 >
                   {activeTab === 4 && index === 1 && (
                     <span className="absolute -top-2 left-0 mx-auto right-0 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
                       Most Popular
                     </span>
                   )}
-                  <figure className="mb-11">
+                  <figure className="mb-5 xl:mb-11">
                     <img src={card.thumbnail} alt="img" className="mx-auto" />
                   </figure>
-                  <div className="text-5xl font-semibold leading-none text-white mb-8">
+                  <div className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none text-white mb-8">
                     {card.price}
                     <span className="text-base font-normal leading-none text-[rgba(255,255,255,0.8)]">
                       {" "}
@@ -184,11 +184,10 @@ const Pricing = () => {
                   </div>
                   <Link
                     to="/"
-                    className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize border mb-8 ${
-                      activeTab === 4 && index === 1
+                    className={`text-sm font-semibold leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize border mb-8 ${activeTab === 4 && index === 1
                         ? "bg-custom-mint text-jaguar"
                         : "bg-spearmint-radial-gradient text-spearmint border-custom-transparent-green"
-                    }`}
+                      }`}
                   >
                     get funded
                   </Link>

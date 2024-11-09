@@ -44,39 +44,40 @@ const AllSports = () => {
   ];
   return (
     <section
-      className="py-20 bg-cover bg-no-repeat"
+      className="py-10 xl:py-20 bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${SportsBgImg})` }}
     >
       <div className="container">
-        <div className="mb-[60px]">
-          <h2 className="text-[60px] font-bangers leading-none text-white mb-8">
+        <div className="mb-10 xl:mb-[60px]">
+          <h2 className="text-heading2">
             Everything you could want!
           </h2>
-          <p className="text-base leading-8 text-[rgba(255,255,255,0.8)]">
+          <p className="text-body">
             Place your picks on anything you desire in the world of sports!
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-5 max-w-[260px] sm:max-w-[550px] w-full lg:max-w-full lg:w-auto mx-auto">
           {sportData.map((item) => (
             <div
-              className="bg-contain bg-no-repeat bg-center text-center px-8 pb-11"
+              className="bg-contain bg-no-repeat bg-bottom text-center px-4 4xl:px-8 pb-8 3xl:pb-11 sports-card"
               style={{ backgroundImage: `url(${item.bgImg})` }}
             >
-              <figure className="min-h-[289px]">
+              <figure className="min-h-[150px] xl:min-h-[180px] 3xl:min-h-[220px] 4xl:min-h-[289px] relative flex justify-center items-center">
                 <img
                   src={item.thumbnail}
                   alt="sports"
-                  className="mx-auto -mt-10 object-contain flex justify-center items-center"
+                  className="-mt-10 object-contain max-w-[140px] xl:max-w-[160px] 3xl:max-w-[200px] 4xl:max-w-[242px] w-full mx-auto"
                 />
+                <div className="img-shadow absolute bottom-5 left-0 h-[80px] 4xl:h-[132px] w-full"></div>
               </figure>
-              <h3 className="text-[40px] font-bangers text-white leading-none">
+              <h3 className="text-3xl 3xl:text-[40px] font-bangers text-white leading-none">
                 {item.name}
               </h3>
-              <img src={BarImg} alt="barImg" className="my-4 mx-auto" />
+              <img src={BarImg} alt="barImg" className="my-2 3xl:my-4 mx-auto" />
               <span className="text-sm font-normal font-bangers text-white mb-6 block">
                 {item.description}
               </span>
-              <Link className="border border-custom-transparent-green h-[58px] rounded-[50px] text-sm font-semibold leading-none flex items-center justify-center bg-white">
+              <Link className="border border-custom-transparent-green h-12 3xl:h-[58px] rounded-[50px] text-sm font-semibold leading-none flex items-center justify-center bg-white">
                 {item.btnTitle}
               </Link>
             </div>

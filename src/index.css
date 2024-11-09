@@ -193,9 +193,14 @@ img {
 }
 
 .container {
-  max-width: 1520px;
   margin: 0 auto;
   width: 90%;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1520px;
+  }
 }
 
 /* global css end */
@@ -211,4 +216,49 @@ img {
   background: linear-gradient(180deg, rgba(2, 2, 1, 0) 0%, #020201 100%);
   z-index: 1;
 }
+
+@media (max-width:767px) {
+  .banner::after { 
+    min-height: 120px;
+  }
+}
 /* banner css end */
+
+/* sports css start */
+.sports-card:first-child .img-shadow {
+  background: linear-gradient(
+    180deg,
+    rgba(45, 31, 239, 0) 0%,
+    rgba(45, 31, 239, 0.7) 50%,
+    #2d1fef 100%
+  );
+}
+.sports-card:nth-child(2) .img-shadow {
+  background: linear-gradient(
+    180deg,
+    rgba(220, 95, 63, 0) 0%,
+    rgba(220, 95, 63, 0.7) 50%,
+    #dc5f3f 100%
+  );
+}
+.sports-card:nth-child(3) .img-shadow {
+  background: linear-gradient(
+    180deg,
+    rgba(209, 139, 118, 0) 0%,
+    rgba(209, 139, 118, 0.7) 50%,
+    #d18b76 100%
+  );
+}
+.sports-card:last-child .img-shadow {
+  background: var(
+    --Linear,
+    linear-gradient(
+      180deg,
+      rgba(88, 152, 228, 0) 0%,
+      rgba(88, 152, 228, 0.7) 50%,
+      #5898e4 100%
+    )
+  );
+}
+
+/* sports css end */

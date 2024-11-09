@@ -54,6 +54,15 @@ module.exports = {
         "custom-white-three": "0px 4px 4px 0px rgba(255,255,255,0.4) inset",
         "custom-white-four": "0px 4px 10px 0px rgba(255,255,255,0.1) inset",
       },
+      screens: {
+        sm: "640px", // Small screens, such as mobile phones (>= 640px)
+        md: "768px", // Medium screens, such as tablets (>= 768px)
+        lg: "1025px", // Large screens, such as laptops (>= 1024px)
+        xl: "1280px", // Extra large screens, such as desktops (>= 1280px)
+        "2xl": "1366px",
+        "3xl": "1440px",
+        "4xl": "1600px",
+      },
     },
   },
   plugins: [
@@ -66,13 +75,26 @@ module.exports = {
           color: "#ffffff",
           margin: "0 auto",
           marginBottom: "2rem",
+          "@media (max-width: 1280px)": {
+            fontSize: "36px",
+            marginBottom: "1rem",
+          },
+          "@media (max-width: 1024px)": {
+            fontSize: "30px",
+          },
         },
         ".text-body": {
           fontSize: "1rem",
           lineHeight: "2rem",
           color: "rgba(255, 255, 255, 0.8)",
+          "@media (max-width: 1024px)": {
+            fontSize: "14px",
+            lineHeight: "1.2rem",
+          },
         },
       });
     },
   ],
+
+
 };

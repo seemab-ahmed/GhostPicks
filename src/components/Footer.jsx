@@ -36,9 +36,9 @@ const Footer = () => {
     <footer className="py-10">
       <div className="container">
         <div className="bg-spearmint rounded-[20px]">
-          <div className="p-10">
-            <div className="p-8 bg-jaguar rounded-[20px] grid grid-cols-12 mb-10">
-              <div className="col-span-7">
+          <div className="p-5 lg:p-8 xl:p-10">
+            <div className="p-4 md:p-8 bg-jaguar rounded-[20px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-5 mb-10">
+              <div className="xl:col-span-7">
                 <span className="text-sm font-normal leading-none text-[rgba(255,255,255,0.8)] mb-2.5">
                   Stay up to date
                 </span>
@@ -46,7 +46,7 @@ const Footer = () => {
                   Our Newsletter
                 </h5>
               </div>
-              <form className="col-span-5 h-[68px] bg-custom-transparent-green rounded-[50px] p-1 flex items-center">
+              <form className="xl:col-span-5 h-12 md:h-[68px] bg-custom-transparent-green rounded-[50px] p-1 flex items-center">
                 <input
                   type="email"
                   placeholder="Email"
@@ -60,13 +60,13 @@ const Footer = () => {
                 </button>
               </form>
             </div>
-            <ul className="grid grid-cols-3 gap-5 mb-10">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
               {socialList.map((item, index) => (
                 <li key={index}>
                   <Link className="p-5 rounded-[20px] text-lg font-medium leading-none text-jaguar shadow-custom-green border border-border-transparent-white flex items-center justify-between gap-5 bg-[rgba(2,2,2,0.10)]" to={item.path}>
                     {item.title}
                     <span>
-                      <img src={item.icon} alt={item.title} />
+                      <img src={item.icon} alt={item.title} className="w-10 xl:w-16 h-10 xl:h-16" />
                     </span>
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ const Footer = () => {
               <h5 className="text-base leading-none font-semibold text-[rgba(2,2,1,0.8)] mb-7">
                 Important Links
               </h5>
-              <ul className="flex items-center gap-8">
+              <ul className="flex items-center flex-wrap justify-center gap-5 xl:gap-8">
                 {footerNavLinks.map((link) => (
                   <li>
                     <Link
@@ -89,7 +89,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="h-[1px] max-w-[574px] w-full bg-[rgba(2,2,1,0.1)] my-10 mx-auto"></div>
+            <div className="h-[1px] max-w-[574px] w-full bg-[rgba(2,2,1,0.1)] my-5 xl:my-10 mx-auto"></div>
             <p className="text-xs text-[rgba(2,2,1,0.8)] leading-7 max-w-[1300px] text-center w-full mx-auto">
               Proppicks is not a casino, sportsbook, or gambling operator, nor
               does it accept or place any type of wager in any capacity.
