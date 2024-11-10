@@ -34,10 +34,12 @@ const RealTime = () => {
   return (
     <section className="py-10 xl:py-20">
       <div className="container">
-        <div className="mb-10 lg:mb-[60px]">
-          <h2 className="text-heading2">
-            Real Time sports coverage
-          </h2>
+        <div
+          className="mb-10 lg:mb-[60px] text-center"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <h2 className="text-heading2">Real Time sports coverage</h2>
           <p className="text-body max-w-[675px] w-full mx-auto">
             Unlock the game with confidence, bet on sports using our funds and
             keep 50% of the winnings. Play smart, we’ve got your back!
@@ -45,7 +47,11 @@ const RealTime = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[1226px] w-full mx-auto">
           {sports.map((item) => (
-            <div className="py-8 px-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green relative">
+            <div
+              className="py-8 px-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green relative"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+            >
               {item.tag && (
                 <span className="text-xs lg:text-sm font-medium -tracking-[1%] text-black rounded-[50px] bg-spearmint px-2.5 py-1 uppercase absolute -top-2.5 right-8 opacity-1">
                   {item.tag}
@@ -56,7 +62,7 @@ const RealTime = () => {
                 alt="sports"
                 className="w-full rounded-[20px] object-cover overflow-hidden"
               />
-              <span className="border border-[rgba(255,255,255,0.04)] bg-[#1B1E1B] px-5 flex items-center justify-center max-w-fit text-xs lg:text-sm font-medium leading-none text-[rgba(255,255,255,0.8)] h-8 lg:h-11 rounded-[50px] shadow-custom-white-two mt-5 mb-2.5 shadow-custom-grey">
+              <span className="border border-[rgba(255,255,255,0.04)] bg-[#1B1E1B] px-5 flex items-center justify-center max-w-fit text-xs lg:text-sm font-medium leading-none text-[rgba(255,255,255,0.8)] h-8 lg:h-11 rounded-[50px] mt-5 mb-2.5 shadow-custom-grey">
                 {item.date}
               </span>
               <p className="text-base lg:text-lg xl:text-xl font-medium text-white leading-7 text-left">

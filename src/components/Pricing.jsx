@@ -122,7 +122,11 @@ const Pricing = () => {
   return (
     <section className="py-10 xl:py-20">
       <div className="container">
-        <div className="max-w-[593px] w-full mx-auto mb-10 xl:mb-[60px]">
+        <div
+          className="max-w-[593px] w-full mx-auto mb-10 xl:mb-[60px] text-center"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h2 className="text-heading2 max-w-[440px] w-full mx-auto">
             The time is now, lets{" "}
             <span className="text-spearmint">get you funded</span>
@@ -134,17 +138,22 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="max-w-[1164px] w-full mx-auto">
+        <div
+          className="max-w-[1164px] w-full mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <div className="overflow-y-auto mb-6">
             <ul className="grid grid-cols-5 gap-5 max-w-[915px] pt-5 pb-2 min-w-[915px] w-full mx-auto">
               {tabs.map((tab) => (
                 <li
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-border-transparent-white cursor-pointer relative ${activeTab === tab.id
+                  className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-border-transparent-white cursor-pointer relative ${
+                    activeTab === tab.id
                       ? "bg-white-radial-gradient text-white"
                       : "bg-custom-transparent-jaguar text-starDust"
-                    }`}
+                  }`}
                 >
                   {tab.label}
                   {tab.tag && (
@@ -162,10 +171,11 @@ const Pricing = () => {
               {cardData[activeTab].map((card, index) => (
                 <div
                   key={index}
-                  className={`rounded-[20px] border p-5 xl:p-8 text-center shadow-custom-green relative ${activeTab === 4 && index === 1
+                  className={`rounded-[20px] border p-5 xl:p-8 text-center shadow-custom-green relative ${
+                    activeTab === 4 && index === 1
                       ? "border-spearmint bg-custom-mix-two"
                       : "border-custom-transparent-mint-two bg-custom-mix"
-                    }`}
+                  }`}
                 >
                   {activeTab === 4 && index === 1 && (
                     <span className="absolute -top-2 left-0 mx-auto right-0 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
@@ -184,10 +194,11 @@ const Pricing = () => {
                   </div>
                   <Link
                     to="/"
-                    className={`text-sm font-semibold leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize border mb-8 ${activeTab === 4 && index === 1
+                    className={`text-sm font-semibold leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize border mb-8 ${
+                      activeTab === 4 && index === 1
                         ? "bg-custom-mint text-jaguar"
                         : "bg-spearmint-radial-gradient text-spearmint border-custom-transparent-green"
-                      }`}
+                    }`}
                   >
                     get funded
                   </Link>

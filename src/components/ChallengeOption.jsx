@@ -6,17 +6,23 @@ const ChallengeOption = () => {
     <section className="pt-10 xl:pt-20 pb-20 xl:pb-40 text-left">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
-          <div className="lg:col-span-5">
-            <h2 className="text-heading2">
-              Challenge Options
-            </h2>
+          <div
+            className="lg:col-span-5"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <h2 className="text-heading2">Challenge Options</h2>
             <p className="text-body">
               Unlock the game with confidence, bet on sports using our funds and
               keep 50% of the winnings. Play smart, we’ve got your back!
             </p>
           </div>
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green">
+            <div
+              className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+            >
               <h5 className="text-lg lg:text-xl xl:text-2xl font-medium text-white leading-none mb-5">
                 2 Step Challenge
               </h5>
@@ -31,7 +37,11 @@ const ChallengeOption = () => {
                 Start challenge
               </Link>
             </div>
-            <div className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green">
+            <div
+              className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green"
+              data-aos="zoom-in"
+              data-aos-duration="3000"
+            >
               <h5 className="text-lg lg:text-xl xl:text-2xl font-medium text-white leading-none mb-5">
                 3 Step Challenge
               </h5>

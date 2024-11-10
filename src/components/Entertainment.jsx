@@ -7,7 +7,7 @@ import CbsSportsImg from "../assets/images/cbs-sports.svg";
 
 const Entertainment = () => {
   return (
-    <section className="py-10 xl:py-20 relative">
+    <section className="py-10 xl:py-20 relative text-center">
       <div className="absolute top-0 left w-full h-[1px] bg-custom-mix-three"></div>
       <img
         src={EffectsImg}
@@ -16,7 +16,11 @@ const Entertainment = () => {
       />
       <div className="container">
         <div className="max-w-[1280px] w-full mx-auto">
-          <div className="mb-10 xl:mb-[60px]">
+          <div
+            className="mb-10 xl:mb-[60px]"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <h2 className="text-heading2 max-w-[622px] w-full mx-auto">
               Unleash The Thrill Of Sports Entertainment
             </h2>
@@ -26,7 +30,11 @@ const Entertainment = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10 lg:mb-[60px]">
-            <div className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer">
+            <div
+              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
               {/* scale-100 hover:scale-105 */}
               <h4 className="text-2xl lg:text-[32px] font-bold leading-none mb-2.5">
                 195+
@@ -35,7 +43,11 @@ const Entertainment = () => {
                 Countries Covered
               </span>
             </div>
-            <div className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer">
+            <div
+              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+            >
               {/* scale-100 hover:scale-105 */}
               <h4 className="text-2xl lg:text-[32px] font-bold leading-none mb-2.5">
                 24/7
@@ -44,7 +56,11 @@ const Entertainment = () => {
                 Coverage
               </span>
             </div>
-            <div className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer">
+            <div
+              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-duration="3000"
+            >
               {/* scale-100 hover:scale-105 */}
               <h4 className="text-2xl lg:text-[32px] font-bold leading-none mb-2.5">
                 1000+
@@ -54,7 +70,11 @@ const Entertainment = () => {
               </span>
             </div>
           </div>
-          <div className="max-w-[932px] w-full mx-auto">
+          <div
+            className="max-w-[932px] w-full mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <h5 className="text-xl lg:text-2xl font-medium text-[rgba(255,255,255,0.8)] leading-none mb-8">
               Real Time Sports Data
             </h5>

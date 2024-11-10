@@ -45,7 +45,19 @@ module.exports = {
           "radial-gradient(75.49% 124.18% at 50% 0%, rgba(52, 250, 72, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(270deg, #020702 0%, #020201 80%)",
         "custom-mix-three":
           "radial-gradient(50% 50% at 50% 50%, #34FA48 0%, rgba(52, 250, 72, 0.00) 100%)",
-        "custom-grey": "-4px -4px 10px 0px rgba(255, 255, 255, 0.04) inset",
+        "custom-gordons-green-gradient":
+          "linear-gradient(0deg, #020702 0%, #020201 80%)",
+        "custom-blue-gradient":
+          "linear-gradient(180deg, #291CED 0%, #2F20F0 100%)",
+        "custom-orange-gradient":
+          "linear-gradient(180deg, #DC5F3F 0%, #DC5F3F 100%)",
+        "custom-peach-gradient":
+          "linear-gradient(180deg, #D18B76 61.63%, #D1A776 100%)",
+        "custom-bluelight-grandient":
+          "linear-gradient(180deg, #5898E4 63.23%, #3D86DD 100%)",
+        "custom-grey-gradient-two":
+          "linear-gradient(180deg, rgba(10, 33, 12, 0.32) 0%, rgba(10, 33, 12, 0.08) 96.91%)",
+          "custom-black-two-gradient": "linear-gradient(180deg, rgba(2, 2, 1, 0.00) 0%, #020201 100%)",
       },
       boxShadow: {
         "custom-green": " 0px -10px 40px 0px rgba(52,250,72,0.1) inset",
@@ -53,6 +65,10 @@ module.exports = {
         "custom-white-two": "-4px -4px 10px 0px rgba(255,255,255,0.04) inset",
         "custom-white-three": "0px 4px 4px 0px rgba(255,255,255,0.4) inset",
         "custom-white-four": "0px 4px 10px 0px rgba(255,255,255,0.1) inset",
+        "custom-grey": "-4px -4px 10px 0px rgba(255, 255, 255, 0.04) inset",
+        "custom-gorden": "0px -10px 40px 0px rgba(68, 240, 88, 0.10) inset",
+        "custom-green-two": "-4px -4px 10px 0px rgba(11, 32, 13, 0.04) inset",
+        "custom-blue": "0px -10px 40px 0px #2F23C2 inset",
       },
       screens: {
         sm: "640px", // Small screens, such as mobile phones (>= 640px)
@@ -73,9 +89,9 @@ module.exports = {
           fontFamily: "Bangers, cursive",
           lineHeight: "1",
           color: "#ffffff",
-          margin: "0 auto",
+          // margin: "0 auto",
           marginBottom: "2rem",
-          "@media (max-width: 1280px)": {
+          "@media (max-width: 1279px)": {
             fontSize: "36px",
             marginBottom: "1rem",
           },
@@ -95,6 +111,4 @@ module.exports = {
       });
     },
   ],
-
-
 };

@@ -48,10 +48,12 @@ const AllSports = () => {
       style={{ backgroundImage: `url(${SportsBgImg})` }}
     >
       <div className="container">
-        <div className="mb-10 xl:mb-[60px]">
-          <h2 className="text-heading2">
-            Everything you could want!
-          </h2>
+        <div
+          className="mb-10 xl:mb-[60px] text-center"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <h2 className="text-heading2">Everything you could want!</h2>
           <p className="text-body">
             Place your picks on anything you desire in the world of sports!
           </p>
@@ -61,6 +63,8 @@ const AllSports = () => {
             <div
               className="bg-contain bg-no-repeat bg-bottom text-center px-4 4xl:px-8 pb-8 3xl:pb-11 sports-card"
               style={{ backgroundImage: `url(${item.bgImg})` }}
+              data-aos="zoom-in"
+              data-aos-duration="2500"
             >
               <figure className="min-h-[150px] xl:min-h-[180px] 3xl:min-h-[220px] 4xl:min-h-[289px] relative flex justify-center items-center">
                 <img
@@ -73,7 +77,11 @@ const AllSports = () => {
               <h3 className="text-3xl 3xl:text-[40px] font-bangers text-white leading-none">
                 {item.name}
               </h3>
-              <img src={BarImg} alt="barImg" className="my-2 3xl:my-4 mx-auto" />
+              <img
+                src={BarImg}
+                alt="barImg"
+                className="my-2 3xl:my-4 mx-auto"
+              />
               <span className="text-sm font-normal font-bangers text-white mb-6 block">
                 {item.description}
               </span>
