@@ -18,7 +18,7 @@ const Proppick = () => {
           <div
             className="max-w-[815px] w-full pt-32 xl:pt-[240px] lg:p-10 relative"
             data-aos="fade-right"
-            data-aos-duration="2500"
+            data-aos-duration="3000"
           >
             <h2 className="text-heading2 max-w-[593px] w-full text-left">
               How to get a Proppicks bankroll
@@ -62,7 +62,7 @@ const Proppick = () => {
           <div
             className="max-w-[684px] w-full"
             data-aos="fade-left"
-            data-aos-duration="2500"
+            data-aos-duration="3000"
           >
             <img src={AgoraImg} alt="agora-img" className="mx-auto" />
             <div className="rounded-[40px] bg-custom-green p-4 md:p-6 xl:p-10 -mt-16 relative border border-border-transparent-white">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Tick from "../assets/images/check-circle.svg";
+import Tick from "../assets/images/check-circle.svg";
 import ReferBannerImg from "../assets/images/refer-banner-img.png";
 import EffectsImg from "../assets/images/effects.png";
 

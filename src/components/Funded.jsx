@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Funded = () => {
+  const [accountSizeProgress, setAccountSizeProgress] = useState(50); 
+  const [profitRateProgress, setProfitRateProgress] = useState(100);
+
+  const minAccountSize = 5000;
+  const maxAccountSize = 50000;
+
+  const calculateAccountSize = (progress) => {
+    return (
+      (maxAccountSize - minAccountSize) * (progress / 100) + minAccountSize
+    );
+  };
+
+  const calculateProfitPerMonth = (accountSize, profitRate) => {
+    return ((accountSize * profitRate) / 100).toFixed(2);
+  };
+
+  const accountSize = calculateAccountSize(accountSizeProgress);
+  const profitPerMonth = calculateProfitPerMonth(
+    accountSize,
+    profitRateProgress
+  );
+  const profitSplit = (profitPerMonth / 2).toFixed(2);
+
+  const handleAccountSizeChange = (e) => {
+    setAccountSizeProgress(Number(e.target.value));
+  };
+
+  const handleProfitRateChange = (e) => {
+    setProfitRateProgress(Number(e.target.value));
+  };
+
   return (
     <section className="py-10 xl:py-20">
       <div className="container">
@@ -34,47 +65,95 @@ const Funded = () => {
             data-aos="fade-left"
             data-aos-duration="3000"
           >
-            <div className="rounded-[10px] bg-custom-transparent-white p-5 mb-2.5">
+            <div className="rounded-[10px] bg-custom-transparent-white p-5 mb-2.5 relative">
               <h3 className="text-lg lg:text-2xl xl:text-[32px] font-bangers mb-4 xl:mb-6 leading-none text-white">
-                Acount size
+                Account size
               </h3>
               <div>
-                <div class="flex justify-between mb-4 xl:mb-6 py-2.5">
-                  <span class="text-base font-semibold text-white">$5k</span>
-                  <span class="text-sm font-semibold text-white">$50k</span>
+                <div className="flex justify-between mb-4 xl:mb-6 py-2.5">
+                  <span className="text-base font-semibold text-white">
+                    $5k
+                  </span>
+                  <span className="text-sm font-semibold text-white">$50k</span>
                 </div>
                 <div className="py-4">
-                  <div class="w-full bg-custom-transparent-white rounded-full h-2.5 max-w-[510px]">
-                    <div class="bg-white h-2.5 rounded-full w-1/3 relative">
-                      <span className="absolute -right-0 top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]">
-                        $25,000k
+                  <div className="relative w-full bg-custom-transparent-white rounded-full h-2.5 max-w-[510px]">
+                    <div
+                      className="bg-white h-2.5 rounded-full relative"
+                      style={{ width: `${accountSizeProgress}%` }}
+                    >
+                      <span
+                        className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]"
+                        style={{
+                          right: accountSizeProgress < 5 ? "auto" : "-0.5rem",
+                          left: accountSizeProgress < 5 ? "0" : "auto",
+                        }}
+                      >
+                        {accountSize.toLocaleString("en-US", {
+                          style: "currency",
+                          currency: "USD",
+                          minimumFractionDigits: 0,
+                        })}
                       </span>
                     </div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value={accountSizeProgress}
+                      onChange={handleAccountSizeChange}
+                      className="absolute top-0 left-0 w-full h-2.5 opacity-0 cursor-pointer"
+                      style={{ WebkitAppearance: "none" }}
+                    />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="rounded-[10px] bg-custom-transparent-white p-5">
+            <div className="rounded-[10px] bg-custom-transparent-white p-5 relative">
               <h3 className="text-lg lg:text-2xl xl:text-[32px] font-bangers mb-4 xl:mb-6 leading-none text-white">
                 Profit rate
               </h3>
-              <div>
-                <div className="py-4">
-                  <div class="w-full bg-custom-transparent-white rounded-full h-2.5 max-w-[510px]">
-                    <div class="bg-white h-2.5 rounded-full w-full relative">
-                      <span className="absolute -right-0 top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]">
-                        100%
-                      </span>
-                    </div>
+              <div className="py-4">
+                <div className="relative w-full bg-custom-transparent-white rounded-full h-2.5 max-w-[510px]">
+                  <div
+                    className="bg-white h-2.5 rounded-full relative"
+                    style={{ width: `${profitRateProgress}%` }}
+                  >
+                    <span
+                      className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]"
+                      style={{
+                        right: profitRateProgress < 5 ? "auto" : "-0.5rem",
+                        left: profitRateProgress < 5 ? "0" : "auto",
+                      }}
+                    >
+                      {profitRateProgress}%
+                    </span>
                   </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={profitRateProgress}
+                    onChange={handleProfitRateChange}
+                    className="absolute top-0 left-0 w-full h-2.5 opacity-0 cursor-pointer"
+                    style={{ WebkitAppearance: "none" }}
+                  />
                 </div>
               </div>
             </div>
-            <Link className="text-sm xl:text-base font-semibold leading-none text-[#2E1FEF] h-10 lg:h-12 xl:h-[60px] capitilize bg-white rounded-full flex items-center justify-center mt-8">
-              $19,000/Month
+            <Link className="text-sm xl:text-base font-semibold leading-none text-[#2E1FEF] h-10 lg:h-12 xl:h-[60px] capitalize bg-white rounded-full flex items-center justify-center mt-8">
+              {parseFloat(profitPerMonth).toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })}
+              /Month
             </Link>
-            <Link className="text-sm xl:text-base font-semibold leading-none text-white h-10 lg:h-12 xl:h-[60px] capitilize rounded-full flex items-center justify-center">
-              With 50% Profit Split
+            <Link className="text-sm xl:text-base font-semibold leading-none text-white h-10 lg:h-12 xl:h-[60px] capitalize rounded-full flex items-center justify-center">
+              With 50% Profit Split:{" "}
+              {parseFloat(profitSplit).toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              })}
             </Link>
           </div>
         </div>
