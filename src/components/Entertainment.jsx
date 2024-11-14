@@ -7,8 +7,20 @@ import CbsSportsImg from "../assets/images/cbs-sports.svg";
 
 const Entertainment = () => {
   return (
-    <section className="py-10 xl:py-20 relative text-center">
-      <div className="absolute top-0 left w-full h-[1px] bg-custom-mix-three"></div>
+    <section
+      className="py-10 xl:py-20 relative text-center"
+      style={{
+        background:
+          "radial-gradient(100% 50% at 50% 0%, rgba(2, 2, 1, 0.00) 0%, #020201 100%)",
+      }}
+    >
+      <div
+        className="absolute top-0 left w-full h-[1px]"
+        style={{
+          background:
+            "radial-gradient(50% 50% at 50% 50%, #F2C654 0%, rgba(242, 198, 84, 0.00) 100%)",
+        }}
+      ></div>
       <img
         src={EffectsImg}
         alt="effect"
@@ -31,7 +43,7 @@ const Entertainment = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10 lg:mb-[60px]">
             <div
-              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              className="p-5 lg:p-8 rounded-[20px] bg-[#070702] border border-custom-transparent-saffron shadow-custom-mango-two transition-all hover:bg-custom-mango-gradient text-white hover:text-black cursor-pointer"
               data-aos="zoom-in"
               data-aos-duration="2000"
             >
@@ -44,7 +56,7 @@ const Entertainment = () => {
               </span>
             </div>
             <div
-              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              className="p-5 lg:p-8 rounded-[20px] bg-[#070702] border border-custom-transparent-saffron shadow-custom-mango-two transition-all hover:bg-custom-mango-gradient text-white hover:text-black cursor-pointer"
               data-aos="zoom-in"
               data-aos-duration="2500"
             >
@@ -57,7 +69,7 @@ const Entertainment = () => {
               </span>
             </div>
             <div
-              className="p-5 lg:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green transition-all hover:bg-custom-mint text-white hover:text-black cursor-pointer"
+              className="p-5 lg:p-8 rounded-[20px] bg-[#070702] border border-custom-transparent-saffron shadow-custom-mango-two transition-all hover:bg-custom-mango-gradient text-white hover:text-black cursor-pointer"
               data-aos="zoom-in"
               data-aos-duration="3000"
             >

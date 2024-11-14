@@ -1,8 +1,8 @@
 import React from "react";
-import Card1Img from "../assets/images/card1.png";
-import Card2Img from "../assets/images/card2.png";
-import Card3Img from "../assets/images/card3.png";
-import Card4Img from "../assets/images/card4.png";
+// import Card1Img from "../assets/images/card1.png";
+// import Card2Img from "../assets/images/card2.png";
+// import Card3Img from "../assets/images/card3.png";
+// import Card4Img from "../assets/images/card4.png";
 import FootballImg from "../assets/images/football.png";
 import basketballImg from "../assets/images/basketball.png";
 import HelmetImg from "../assets/images/helmet.png";
@@ -14,28 +14,28 @@ import { Link } from "react-router-dom";
 const AllSports = () => {
   const sportData = [
     {
-      bgImg: Card1Img,
+      bgImg: "#D4A964",
       thumbnail: FootballImg,
       name: "soccer",
       description: "Worldwide Soccer Picks",
       btnTitle: "over 100+ games",
     },
     {
-      bgImg: Card2Img,
+      bgImg: "#AD7E38",
       thumbnail: basketballImg,
       name: "Basketball",
       description: "Worldwide basketball Picks",
       btnTitle: "over 50+ games",
     },
     {
-      bgImg: Card3Img,
+      bgImg: "#D4A964",
       thumbnail: VollyballImg,
       name: "Football",
       description: "Worldwide football Picks",
       btnTitle: "over 30+ games",
     },
     {
-      bgImg: Card4Img,
+      bgImg: "#AD7E38",
       thumbnail: HelmetImg,
       name: "much more",
       description: "anything you want",
@@ -61,18 +61,26 @@ const AllSports = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-5 max-w-[260px] sm:max-w-[550px] w-full lg:max-w-full lg:w-auto mx-auto">
           {sportData.map((item) => (
             <div
-              className="bg-contain bg-no-repeat bg-bottom text-center px-4 4xl:px-8 pb-8 3xl:pb-11 sports-card"
-              style={{ backgroundImage: `url(${item.bgImg})` }}
+              className="text-center border-[4px] border-white px-4 4xl:px-8 pb-8 3xl:pb-11 sports-card rounded-[20px] relative"
+              style={{ background: `${item.bgImg}` }}
               data-aos="zoom-in"
               data-aos-duration="2500"
             >
-              <figure className="min-h-[150px] xl:min-h-[180px] 3xl:min-h-[220px] 4xl:min-h-[289px] relative flex justify-center items-center">
+              <div className="flex items-center justify-between p-4 absolute top-0 left-0 w-full h-auto -z-[1]">
+                <span className="w-1.5 h-1.5 bg-white"></span>
+                <span className="w-1.5 h-1.5 bg-white"></span>
+              </div>
+              <div className="flex items-center justify-between p-4 absolute bottom-0 left-0 w-full h-auto -z-[1]">
+                <span className="w-1.5 h-1.5 bg-white"></span>
+                <span className="w-1.5 h-1.5 bg-white"></span>
+              </div>
+              <figure className="min-h-[150px] xl:min-h-[180px] 3xl:min-h-[220px] 4xl:min-h-[289px] relative flex justify-center items-center -mt-10 xl:-mt-16 4xl:-mt-20">
                 <img
                   src={item.thumbnail}
                   alt="sports"
-                  className="-mt-10 object-contain max-w-[140px] xl:max-w-[160px] 3xl:max-w-[200px] 4xl:max-w-[242px] w-full mx-auto"
+                  className="object-contain max-w-[140px] xl:max-w-[160px] 3xl:max-w-[200px] 4xl:max-w-[242px] w-full mx-auto"
                 />
-                <div className="img-shadow absolute bottom-5 left-0 h-[80px] 4xl:h-[132px] w-full"></div>
+                <div className="img-shadow absolute bottom-0 left-0 h-[80px] 4xl:h-[132px] w-full"></div>
               </figure>
               <h3 className="text-3xl 3xl:text-[40px] font-bangers text-white leading-none">
                 {item.name}

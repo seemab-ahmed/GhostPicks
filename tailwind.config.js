@@ -8,22 +8,29 @@ module.exports = {
       },
       colors: {
         spearmint: "#34FA48",
+        saffronMango: "#F2C654",
         jaguar: "#020201",
         tomato: "#FE6141",
         beanRed: "#FE6566",
         starDust: "#999F9F",
+        "custom-transparent-saffron": "rgba(200, 255, 206, 0.10)",
         "custom-transparent-white": "rgba(255, 255, 255, 0.04)",
         "border-transparent-white": "rgba(255, 255, 255, 0.1)",
         "custom-transparent-green": "rgba(200, 255, 206, 0.1)",
         "custom-transparent-mint-two": "rgba(52, 250, 72, 0.10)",
         "custom-transparent-tomato": "rgba(255, 147, 100, 0.1)",
         "custom-transparent-beanRed": "rgba(254, 97, 99, 0.1)",
+        "custom-transparent-muddy": "rgba(242, 198, 84, 0.70)",
       },
       backgroundImage: {
         "white-radial-gradient":
           "linear-gradient(106deg, rgba(78, 78, 78, 0.10) 0%, rgba(255, 255, 255, 0.10) 0.01%, rgba(255, 255, 255, 0.00) 32.81%, rgba(255, 255, 255, 0.10) 100%)",
-        "spearmint-radial-gradient":
-          "linear-gradient(180deg, rgba(71, 251, 92, 0.10) 0%, rgba(48, 174, 63, 0.10) 100%)",
+        "saffronMango-radial-gradient":
+          "linear-gradient(180deg, rgba(242, 198, 84, 0.10) 0%, rgba(255, 230, 46, 0.10) 100%)",
+        "custom-muddy-gradient":
+          "linear-gradient(180deg, #C68F4F 0%, #F2C654 100%)",
+        "custom-muddy-radial-gradient":
+          "radial-gradient(74.09% 74.09% at 50% 0%, rgba(52, 250, 72, 0.04) 0%, rgba(52, 250, 72, 0.00) 100%), #F2C654",
         "custom-transparent-mint":
           "linear-gradient(90deg, rgba(71,251,92,0.1) 50%, rgba(48,174,63,0.1) 100%)",
         "custom-mint": "linear-gradient(180deg, #47FB5C 0%, #30AE3F 100%)",
@@ -39,6 +46,8 @@ module.exports = {
           "linear-gradient(180deg, rgba(254,108,108,1) 0%, rgba(254,70,75,1) 100%)",
         "custom-transparent-jaguar":
           "linear-gradient(180deg, rgba(10, 10, 10, 0.90) 0%, #040404 100%)",
+        "custom-gradient-one":
+          "linear-gradient(180deg, #020201 0%, #040F05 100%)",
         "custom-mix":
           "radial-gradient(41.96% 69.02% at 50% 0%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(270deg, #020702 0%, #020201 80%)",
         "custom-mix-two":
@@ -57,10 +66,20 @@ module.exports = {
           "linear-gradient(180deg, #5898E4 63.23%, #3D86DD 100%)",
         "custom-grey-gradient-two":
           "linear-gradient(180deg, rgba(10, 33, 12, 0.32) 0%, rgba(10, 33, 12, 0.08) 96.91%)",
-          "custom-black-two-gradient": "linear-gradient(180deg, rgba(2, 2, 1, 0.00) 0%, #020201 100%)",
+        "custom-black-two-gradient":
+          "linear-gradient(180deg, rgba(2, 2, 1, 0.00) 0%, #020201 100%)",
+        "custom-mango-gradient":
+          "linear-gradient(2deg, #F2C654 1.37%, #FFE62E 98.68%)",
+        "custom-gradient-two":
+          "linear-gradient(180deg, rgba(2, 2, 1, 0.10) 0%, rgba(16, 17, 14, 0.10) 100%)",
+        "custom-radial-gradient-two":
+          "radial-gradient(50% 50% at 50% 50%, #F2C654 0%, rgba(242, 198, 84, 0.00) 100%)",
+        "custom-gradient-three":
+          "linear-gradient(180deg, rgba(7, 7, 2, 0.32) 0%, rgba(7, 7, 2, 0.08) 96.91%)",
       },
       boxShadow: {
-        "custom-green": " 0px -10px 40px 0px rgba(52,250,72,0.1) inset",
+        "custom-green": "0px -10px 40px 0px rgba(52,250,72,0.1) inset",
+        "custom-saffron": "0px -10px 40px 0px rgba(238, 238, 238, 0.10) inset",
         "custom-white": "0px 4px 4px 0px rgba(255, 255, 255, 0.40) inset",
         "custom-white-two": "-4px -4px 10px 0px rgba(255,255,255,0.04) inset",
         "custom-white-three": "0px 4px 4px 0px rgba(255,255,255,0.4) inset",
@@ -69,6 +88,13 @@ module.exports = {
         "custom-gorden": "0px -10px 40px 0px rgba(68, 240, 88, 0.10) inset",
         "custom-green-two": "-4px -4px 10px 0px rgba(11, 32, 13, 0.04) inset",
         "custom-blue": "0px -10px 40px 0px #2F23C2 inset",
+        "custom-mango-one": "0px -10px 40px 0px rgba(242, 198, 84, 0.25) inset",
+        "custom-mango-two": "0px -10px 40px 0px rgba(242, 198, 84, 0.10) inset",
+        "custom-mango-three":
+          "-4px -4px 10px 0px rgba(242, 198, 84, 0.04) inset",
+        "custom-saffron-two": "0px -10px 40px 0px rgba(7, 7, 2, 0.10) inset",
+        "custom-muddy-three":
+          "0px -10px 40px 0px rgba(255, 230, 46, 0.20) inset",
       },
       screens: {
         sm: "640px", // Small screens, such as mobile phones (>= 640px)

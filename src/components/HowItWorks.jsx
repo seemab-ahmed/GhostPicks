@@ -1,7 +1,7 @@
 import React from "react";
-import PuzzleImg from "../assets/images/puzzle-icon.svg";
-import GraphImg from "../assets/images/graph-icon.svg";
-import MoneyImg from "../assets/images/money-icon.svg";
+import PuzzleImg from "../assets/images/puzzle-new.svg";
+import GraphImg from "../assets/images/graph-new.svg";
+import MoneyImg from "../assets/images/money-new.svg";
 import { Link } from "react-router-dom";
 
 const HowItWorks = () => {
@@ -47,7 +47,11 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {challangeSteps.map((item) => (
             <div
-              className="bg-custom-gordons-green-gradient shadow-custom-gorden p-5 xl:p-8 border border-transparent rounded-[20px] text-left transition-all hover:border-spearmint hover:bg-custom-mix-two cursor-pointer"
+              className="bg-[#070702] shadow-custom-saffron-two p-5 xl:p-8 border border-transparent rounded-[20px] text-left transition-all hover:border-saffronMango cursor-pointer"
+              // style={{
+              //   bacground:
+              //     "radial-gradient(75.49% 124.18% at 50% 0%, rgba(242, 198, 84, 0.20) 0%, rgba(242, 198, 84, 0.00) 100%), #070702",
+              // }}
               data-aos="zoom-in"
               data-aos-duration="2500"
             >
@@ -57,11 +61,11 @@ const HowItWorks = () => {
                   alt="icon"
                   className="w-10 xl:w-[60px] h-[10] xl:h-[60px]"
                 />
-                <span className="text-xs xl:text-sm font-medium text-white leading-none w-[68px] h-8 xl:h-[38px] flex items-center justify-center rounded bg-custom-transparent-white border border-[rgba(71,251,92,0.10)]">
+                <span className="text-xs xl:text-sm font-medium text-white leading-none w-[68px] h-8 xl:h-[38px] flex items-center justify-center rounded bg-custom-transparent-white border border-[rgba(242,198,84,0.10)]">
                   {item.steps}
                 </span>
               </div>
-              <span className="text-xs font-medium text-white leading-none px-5 h-8 flex items-center justify-center max-w-fit bg-[#0B200D] border border-custom-transparent-white shadow-custom-green-two mb-5 rounded-[50px]">
+              <span className="text-xs font-medium text-saffronMango leading-none px-5 h-8 flex items-center justify-center max-w-fit bg-[rgba(242,198,84,0.10)] border border-custom-transparent-white shadow-custom-mango-three mb-5 rounded-[50px]">
                 {item.subtitle}
               </span>
               <h5 className="text-lg lg:text-xl xl:text-2xl text-white font-semibold leading-none mb-5 xl:mb-7">
@@ -75,7 +79,7 @@ const HowItWorks = () => {
         </div>
         <Link
           to=""
-          className="max-w-[175px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-mint border border-custom-transparent-green rounded-[50px] shadow-custom-white h-12 xl:h-[58px] flex items-center justify-center scale-100 transition-all hover:scale-110"
+          className="max-w-[175px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-muddy-gradient border border-custom-transparent-muddy rounded-[50px] h-12 xl:h-[58px] flex items-center justify-center scale-100 transition-all hover:scale-110"
           data-aos="fade-up"
           data-aos-duration="3000"
         >

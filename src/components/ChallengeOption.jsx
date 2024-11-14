@@ -19,7 +19,7 @@ const ChallengeOption = () => {
           </div>
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div
-              className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green"
+              className="p-5 xl:p-8 rounded-[20px] bg-[#070702] border border-[rgba(242,198,84,0.10)] shadow-custom-mango-two"
               data-aos="zoom-in"
               data-aos-duration="2500"
             >
@@ -32,13 +32,13 @@ const ChallengeOption = () => {
               </p>
               <Link
                 to="/"
-                className="text-sm font-semibold text-spearmint leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green"
+                className="text-sm font-semibold text-saffronMango leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron"
               >
                 Start challenge
               </Link>
             </div>
             <div
-              className="p-5 xl:p-8 rounded-[20px] bg-custom-mix border border-custom-transparent-green shadow-custom-green"
+              className="p-5 xl:p-8 rounded-[20px] bg-[#070702] border border-[rgba(242,198,84,0.10)] shadow-custom-mango-two"
               data-aos="zoom-in"
               data-aos-duration="3000"
             >
@@ -52,7 +52,7 @@ const ChallengeOption = () => {
               </p>
               <Link
                 to="/"
-                className="text-sm font-semibold text-spearmint leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green"
+                className="text-sm font-semibold text-saffronMango leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron"
               >
                 Start challenge
               </Link>

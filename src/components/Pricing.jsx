@@ -3,7 +3,8 @@ import ExpressImg from "../assets/images/express.svg";
 import Step2Img from "../assets/images/2-steps.svg";
 import Step3Img from "../assets/images/3-steps.svg";
 import { Link } from "react-router-dom";
-import Tick from "../assets/images/check-circle.svg";
+import KingLogo from "../assets/images/king-logo.png";
+import Tick from "../assets/images/check.svg";
 
 const Pricing = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -120,7 +121,12 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-10 xl:py-20">
+    <section className="py-10 xl:py-20 relative">
+      <img
+        src={KingLogo}
+        alt="logo"
+        className="w-[27vw] absolute right-0 -top-10 xl:-top-20"
+      />
       <div className="container">
         <div
           className="max-w-[593px] w-full mx-auto mb-10 xl:mb-[60px] text-center"
@@ -129,12 +135,12 @@ const Pricing = () => {
         >
           <h2 className="text-heading2 max-w-[440px] w-full mx-auto">
             The time is now, lets{" "}
-            <span className="text-spearmint">get you funded</span>
+            <span className="text-saffronMango">get you funded</span>
           </h2>
           <p className="text-body mb-10">
             Accelerate your path to funding with clear, achievable goals. Use
             our capital to place your bets and{" "}
-            <span className="text-spearmint">start winning today!</span>
+            <span className="text-saffronMango">start winning today!</span>
           </p>
         </div>
 
@@ -149,7 +155,7 @@ const Pricing = () => {
                 <li
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-border-transparent-white cursor-pointer relative ${
+                  className={`text-sm font-semibold leading-none h-[58px] flex items-center justify-center px-4 rounded-[50px] capitalize border border-[rgba(255,255,255,0.20)] cursor-pointer relative ${
                     activeTab === tab.id
                       ? "bg-white-radial-gradient text-white"
                       : "bg-custom-transparent-jaguar text-starDust"
@@ -157,7 +163,7 @@ const Pricing = () => {
                 >
                   {tab.label}
                   {tab.tag && (
-                    <span className="absolute -top-2 right-5 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
+                    <span className="absolute -top-2 right-5 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-saffronMango px-1.5 py-0.5 uppercase max-w-fit">
                       {tab.tag}
                     </span>
                   )}
@@ -171,14 +177,25 @@ const Pricing = () => {
               {cardData[activeTab].map((card, index) => (
                 <div
                   key={index}
-                  className={`rounded-[20px] border p-5 xl:p-8 text-center shadow-custom-green relative ${
+                  className={`rounded-[20px] border p-5 xl:p-8 text-center relative transition-all hover:shadow-custom-mango-one hover:border-saffronMango cursor-pointer ${
                     activeTab === 4 && index === 1
-                      ? "border-spearmint bg-custom-mix-two"
-                      : "border-custom-transparent-mint-two bg-custom-mix"
+                      ? "border-saffronMango shadow-custom-mango-one"
+                      : "border-custom-transparent-mint-two shadow-custom-mango-two"
                   }`}
+                  style={
+                    activeTab === 4 && index === 1
+                      ? {
+                          background:
+                            "radial-gradient(75.49% 124.18% at 50% 0%, rgba(242, 198, 84, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #070702",
+                        }
+                      : {
+                          background:
+                            "radial-gradient(75.49% 124.18% at 50% 0%, rgba(242, 198, 84, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%), #070702",
+                        }
+                  }
                 >
                   {activeTab === 4 && index === 1 && (
-                    <span className="absolute -top-2 left-0 mx-auto right-0 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-spearmint px-1.5 py-0.5 uppercase max-w-fit">
+                    <span className="absolute -top-2 left-0 mx-auto right-0 text-[9px] font-semibold -tracking-[1%] text-black rounded-[50px] bg-saffronMango px-1.5 py-0.5 uppercase max-w-fit">
                       Most Popular
                     </span>
                   )}
@@ -196,8 +213,8 @@ const Pricing = () => {
                     to="/"
                     className={`text-sm font-semibold leading-none h-10 lg:h-12 xl:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize border mb-8 ${
                       activeTab === 4 && index === 1
-                        ? "bg-custom-mint text-jaguar"
-                        : "bg-spearmint-radial-gradient text-spearmint border-custom-transparent-green"
+                        ? "bg-custom-mango-gradient text-jaguar"
+                        : "bg-saffronMango-radial-gradient text-saffronMango border-custom-transparent-saffron"
                     }`}
                   >
                     get funded

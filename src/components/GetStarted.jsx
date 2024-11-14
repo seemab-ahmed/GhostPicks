@@ -6,7 +6,13 @@ const GetStarted = () => {
   return (
     <section className="py-10 xl:py-20">
       <div className="relative text-center py-10 xl:py-[133px]">
-        <div className="absolute top-0 left w-full h-[1px] bg-custom-mix-three"></div>
+        <div
+          className="absolute top-0 left w-full h-[1px]"
+          style={{
+            background:
+              "radial-gradient(50% 50% at 50% 50%, #F2C654 0%, rgba(242, 198, 84, 0.00) 100%)",
+          }}
+        ></div>
         <img
           src={EffectsImg}
           alt="effect"
@@ -21,7 +27,7 @@ const GetStarted = () => {
             <div className="mb-10 xl:mb-[60px] max-w-[871px] w-full mx-auto">
               <Link
                 to="/"
-                className="text-xs md:text-sm font-semibold text-spearmint leading-none h-[37px] flex items-center justify-center px-5 md:px-8 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green max-w-fit mb-5 md:mb-8 mx-auto scale-100 transition-all hover:scale-110"
+                className="text-xs md:text-sm font-semibold text-saffronMango leading-none h-[37px] flex items-center justify-center px-5 md:px-8 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron max-w-fit mb-5 md:mb-8 mx-auto scale-100 transition-all hover:scale-110"
               >
                 become a pro affiliate
               </Link>
@@ -33,7 +39,7 @@ const GetStarted = () => {
               </p>
               <Link
                 to=""
-                className="max-w-[180px]  w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-mint border border-[rgba(200,255,206,0.7)] rounded-[50px] shadow-custom-white h-12 xl:h-[67px] flex items-center justify-center mb-8 md:mb-16 scale-100 transition-all hover:scale-110"
+                className="max-w-[180px]  w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-muddy-gradient border border-custom-transparent-muddy rounded-[50px] h-12 xl:h-[67px] flex items-center justify-center mb-8 md:mb-16 scale-100 transition-all hover:scale-110"
               >
                 Get Started Now
               </Link>

@@ -83,7 +83,7 @@ const Reviews = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h2 className="text-heading2">What Traders Say About Proppicks</h2>
+          <h2 className="text-heading2">What Traders Say About WagerKingz</h2>
         </div>
       </div>
       <div className="relative">
@@ -116,11 +116,11 @@ const Reviews = () => {
 
 const ReviewCard = ({ review }) => (
   <div
-    className="border border-[rgba(255,255,255,0.10)] bg-custom-grey-gradient-two p-5 xl:p-8 rounded-[20px] relative mb-5"
+    className="border border-[rgba(255,255,255,0.10)] bg-custom-gradient-two p-5 xl:p-8 rounded-[20px] relative mb-5"
     data-aos="zoom-in"
     data-aos-duration="2500"
   >
-    <div className="bg-custom-mix-three absolute left-0 top-0 h-[1px] w-full -z-[1]"></div>
+    <div className="bg-custom-radial-gradient-two absolute left-0 top-0 h-[1px] w-full -z-[1]"></div>
     <div className="flex items-center justify-between mb-5 xl:mb-7">
       <div className="flex items-center justify-between gap-2.5">
         <img src={review.thumbnail} alt="profile" />

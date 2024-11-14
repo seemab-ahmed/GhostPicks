@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Tick from "../assets/images/check-circle.svg";
-import WorkBannerImg from "../assets/images/work-banner-img.png";
+import Tick from "../assets/images/check.svg";
+import WorkBannerImg from "../assets/images/work-banner-img-new.png";
 import EffectsImg from "../assets/images/effects.png";
 
 const WorkBanner = () => {
@@ -27,14 +27,14 @@ const WorkBanner = () => {
           <div className="flex items-center justify-center gap-2.5 max-w-[480px] w-full mx-auto">
             <Link
               to="/"
-              className="text-xs font-semibold text-spearmint leading-none h-[46px] flex items-center justify-center gap-2.5 px-4 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green max-w-fit mb-8 mx-auto text-left"
+              className="text-xs font-semibold text-saffronMango leading-none h-[46px] flex items-center justify-center gap-2.5 px-4 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron max-w-fit mb-8 mx-auto text-left"
             >
               <img src={Tick} alt="tick" className="w-4 h-4" />
               Stop Risking Your own Money
             </Link>
             <Link
               to="/"
-              className="text-xs font-semibold text-spearmint leading-none h-[46px] flex items-center justify-center gap-2.5 px-4 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green max-w-fit mb-8 mx-auto text-left"
+              className="text-xs font-semibold text-saffronMango leading-none h-[46px] flex items-center justify-center gap-2.5 px-4 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron max-w-fit mb-8 mx-auto text-left"
             >
               <img src={Tick} alt="tick" className="w-4 h-4" />
               Bet Big for Life-Changing Income
@@ -42,7 +42,7 @@ const WorkBanner = () => {
           </div>
           <Link
             to=""
-            className="max-w-[180px] xl:max-w-[248px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-mint border border-[rgba(200,255,206,0.7)] rounded-[50px] shadow-custom-white h-12 xl:h-[67px] flex items-center justify-center mb-8 md:mb-16 scale-100 transition-all hover:scale-110"
+            className="max-w-[180px] xl:max-w-[248px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-muddy-gradient border border-custom-transparent-muddy rounded-[50px] shadow-custom-white h-12 xl:h-[67px] flex items-center justify-center scale-100 transition-all hover:scale-110"
           >
             Start Challenge
           </Link>

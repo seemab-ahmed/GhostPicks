@@ -1,7 +1,7 @@
 import React from "react";
-import referralsIcon1 from "../assets/images/10referrals.svg";
-import referralsIcon2 from "../assets/images/50referrals.svg";
-import referralsIcon3 from "../assets/images/100referrals.svg";
+import referralsIcon1 from "../assets/images/10referrals-new.svg";
+import referralsIcon2 from "../assets/images/50referrals-new.svg";
+import referralsIcon3 from "../assets/images/500referrals-new.svg";
 import { Link } from "react-router-dom";
 
 const Milestones = () => {
@@ -10,19 +10,19 @@ const Milestones = () => {
       thumbnail: referralsIcon1,
       title: "10 Referrals",
       para: "Get a $50 Bonus on top of your commissions",
-      bgColor: "linear-gradient(180deg, #DC5F3F 0%, #DC5F3F 100%)",
+      bgColor: "#ED9410",
     },
     {
       thumbnail: referralsIcon2,
       title: "50 Referrals",
       para: "Get a $50 Bonus on top of your commissions",
-      bgColor: "linear-gradient(180deg, #D18B76 61.63%, #D1A776 100%)",
+      bgColor: "#C5872B",
     },
     {
       thumbnail: referralsIcon3,
-      title: "100 Referrals",
+      title: "500 Referrals",
       para: "Get a $50 Bonus on top of your commissions",
-      bgColor: "linear-gradient(180deg, #5898E4 63.23%, #3D86DD 100%)",
+      bgColor: "#AD7E38",
     },
   ];
   return (
@@ -62,7 +62,7 @@ const Milestones = () => {
         </div>
         <Link
           to=""
-          className="max-w-[140px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-mint border border-[rgba(200,255,206,0.7)] rounded-[50px] shadow-custom-white h-12 xl:h-[67px] flex items-center justify-center scale-100 transition-all hover:scale-110"
+          className="max-w-[140px] w-full mx-auto text-base font-semibold text-jaguar leading-none bg-custom-muddy-gradient border border-custom-transparent-muddy rounded-[50px] h-12 xl:h-[67px] flex items-center justify-center scale-100 transition-all hover:scale-110"
           data-aos="fade-up"
           data-aos-duration="3000"
         >

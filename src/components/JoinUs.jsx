@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import JoinUsImg from "../assets/images/join-bg.png";
+import JoinUsImg from "../assets/images/join-bg-new.png";
 
 const JoinUs = () => {
   return (
@@ -19,7 +19,7 @@ const JoinUs = () => {
           </p>
           <Link
             to="/"
-            className="text-sm lg:text-base font-semibold text-jaguar shadow-custom-white-three leading-none h-12 xl:h-[67px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-custom-mint border border-[rgba(200,255,206,0.7)] max-w-[180px] xl:max-w-[248px] w-full mx-auto"
+            className="text-sm lg:text-base font-semibold text-jaguar leading-none h-12 xl:h-[67px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-custom-muddy-gradient border border-[rgba(242,198,84,0.70)] max-w-[180px] xl:max-w-[248px] w-full mx-auto"
           >
             Join Discord
           </Link>

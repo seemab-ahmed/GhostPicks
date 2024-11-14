@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Funded = () => {
-  const [accountSizeProgress, setAccountSizeProgress] = useState(50); 
+  const [accountSizeIndex, setAccountSizeIndex] = useState(0);
   const [profitRateProgress, setProfitRateProgress] = useState(100);
 
-  const minAccountSize = 5000;
-  const maxAccountSize = 50000;
-
-  const calculateAccountSize = (progress) => {
-    return (
-      (maxAccountSize - minAccountSize) * (progress / 100) + minAccountSize
-    );
-  };
+  const accountSizes = [5000, 10000, 25000, 50000];
 
   const calculateProfitPerMonth = (accountSize, profitRate) => {
     return ((accountSize * profitRate) / 100).toFixed(2);
   };
 
-  const accountSize = calculateAccountSize(accountSizeProgress);
+  const accountSize = accountSizes[accountSizeIndex];
   const profitPerMonth = calculateProfitPerMonth(
     accountSize,
     profitRateProgress
@@ -26,7 +19,7 @@ const Funded = () => {
   const profitSplit = (profitPerMonth / 2).toFixed(2);
 
   const handleAccountSizeChange = (e) => {
-    setAccountSizeProgress(Number(e.target.value));
+    setAccountSizeIndex(Number(e.target.value));
   };
 
   const handleProfitRateChange = (e) => {
@@ -44,7 +37,7 @@ const Funded = () => {
           >
             <Link
               to="/"
-              className="text-xs xl:text-sm font-semibold text-spearmint leading-none h-[37px] flex items-center justify-center px-5 xl:px-8 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green max-w-fit mb-5 xl:mb-7 scale-100 transition-all hover:scale-110"
+              className="text-xs xl:text-sm font-semibold text-saffronMango leading-none h-[37px] flex items-center justify-center px-5 xl:px-8 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron max-w-fit mb-5 xl:mb-7 scale-100 transition-all hover:scale-110"
             >
               Our Risk, Your Bets
             </Link>
@@ -55,13 +48,13 @@ const Funded = () => {
             </p>
             <Link
               to=""
-              className="max-w-[175px] w-full text-base font-semibold text-jaguar leading-none bg-custom-mint border border-custom-transparent-green rounded-[50px] shadow-custom-white h-12 xl:h-[58px] flex items-center justify-center scale-100 transition-all hover:scale-110"
+              className="max-w-[175px] w-full text-base font-semibold text-jaguar leading-none bg-custom-muddy-gradient border border-custom-transparent-muddy rounded-[50px] h-12 xl:h-[58px] flex items-center justify-center scale-100 transition-all hover:scale-110"
             >
               Start Challenge
             </Link>
           </div>
           <div
-            className="p-5 xl:p-8 rounded-[20px] border-[4px] border-[#2C1EEE] bg-custom-blue-gradient shadow-custom-blue"
+            className="p-5 xl:p-8 rounded-[20px] border-[4px] border-[rgba(255,230,46,0.10)] bg-[#242108] shadow-custom-muddy-three"
             data-aos="fade-left"
             data-aos-duration="3000"
           >
@@ -80,13 +73,17 @@ const Funded = () => {
                   <div className="relative w-full bg-custom-transparent-white rounded-full h-2.5 max-w-[510px]">
                     <div
                       className="bg-white h-2.5 rounded-full relative"
-                      style={{ width: `${accountSizeProgress}%` }}
+                      style={{
+                        width: `${
+                          (accountSizeIndex / (accountSizes.length - 1)) * 100
+                        }%`,
+                      }}
                     >
                       <span
-                        className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]"
+                        className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-jaguar"
                         style={{
-                          right: accountSizeProgress < 5 ? "auto" : "-0.5rem",
-                          left: accountSizeProgress < 5 ? "0" : "auto",
+                          right: accountSizeIndex === 0 ? "auto" : "-0.5rem",
+                          left: accountSizeIndex === 0 ? "0" : "auto",
                         }}
                       >
                         {accountSize.toLocaleString("en-US", {
@@ -99,8 +96,8 @@ const Funded = () => {
                     <input
                       type="range"
                       min="0"
-                      max="100"
-                      value={accountSizeProgress}
+                      max={accountSizes.length - 1}
+                      value={accountSizeIndex}
                       onChange={handleAccountSizeChange}
                       className="absolute top-0 left-0 w-full h-2.5 opacity-0 cursor-pointer"
                       style={{ WebkitAppearance: "none" }}
@@ -120,7 +117,7 @@ const Funded = () => {
                     style={{ width: `${profitRateProgress}%` }}
                   >
                     <span
-                      className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-[#2E1FEF]"
+                      className="absolute top-1/2 -translate-y-1/2 h-7 xl:h-10 px-3 xl:px-5 flex items-center justify-center rounded-full bg-white text-sm xl:text-base font-semibold leading-none text-jaguar"
                       style={{
                         right: profitRateProgress < 5 ? "auto" : "-0.5rem",
                         left: profitRateProgress < 5 ? "0" : "auto",
@@ -141,7 +138,7 @@ const Funded = () => {
                 </div>
               </div>
             </div>
-            <Link className="text-sm xl:text-base font-semibold leading-none text-[#2E1FEF] h-10 lg:h-12 xl:h-[60px] capitalize bg-white rounded-full flex items-center justify-center mt-8">
+            <Link className="text-sm xl:text-base font-semibold leading-none text-jaguar h-10 lg:h-12 xl:h-[60px] capitalize bg-white rounded-full flex items-center justify-center mt-8">
               {parseFloat(profitPerMonth).toLocaleString("en-US", {
                 style: "currency",
                 currency: "USD",

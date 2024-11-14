@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/images/logo.svg";
+import Logo from "../assets/images/logo_new.svg";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -25,7 +25,6 @@ const Header = () => {
               to="/"
             >
               <img src={Logo} alt="Logo" />
-              GhostPicks
             </NavLink>
           </div>
           <nav
@@ -40,7 +39,7 @@ const Header = () => {
                     to={link.path}
                     className={({ isActive }) =>
                       `text-sm font-normal leading-none ${
-                        isActive ? "text-spearmint" : "text-white"
+                        isActive ? "text-saffronMango" : "text-white"
                       }`
                     }
                   >
@@ -58,7 +57,7 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to="/"
-                className="text-sm font-semibold text-spearmint leading-none h-10 lg:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-spearmint-radial-gradient border border-custom-transparent-green scale-100 transition-all hover:scale-110 w-full lg:w-auto"
+                className="text-sm font-semibold text-saffronMango leading-none h-10 lg:h-[58px] flex items-center justify-center px-8 rounded-[50px] capitalize bg-saffronMango-radial-gradient border border-custom-transparent-saffron scale-100 transition-all hover:scale-110 w-full lg:w-auto"
               >
                 get funded
               </NavLink>
