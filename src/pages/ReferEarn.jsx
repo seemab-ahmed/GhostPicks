@@ -11,7 +11,7 @@ const ReferEarn = () => {
     <main>
       <ReferBanner />
       <HowItWorks />
-      <Funded />
+      <Funded account={false} profit={false} referrals={true}/>
       <Milestones />
       <GetStarted />
       <JoinUs />

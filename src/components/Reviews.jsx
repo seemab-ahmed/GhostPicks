@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect, useRef } from "react";
 import ProfileImg from "../assets/images/profile.png";
 import GermanyImg from "../assets/images/germany.svg";
 import StarImg from "../assets/images/star.svg";
@@ -70,10 +70,10 @@ const Reviews = () => {
     },
   ];
 
-  // Divide reviews into three columns
-  const columnOne = reviewsList.filter((_, index) => index % 3 === 0);
-  const columnTwo = reviewsList.filter((_, index) => index % 3 === 1);
-  const columnThree = reviewsList.filter((_, index) => index % 3 === 2);
+  // // Divide reviews into three columns
+  // const columnOne = reviewsList.filter((_, index) => index % 3 === 0);
+  // const columnTwo = reviewsList.filter((_, index) => index % 3 === 1);
+  // const columnThree = reviewsList.filter((_, index) => index % 3 === 2);
 
   return (
     <section className="py-10 xl:py-20">
@@ -85,44 +85,55 @@ const Reviews = () => {
         >
           <h2 className="text-heading2">What Traders Say About WagerKingz</h2>
         </div>
-      </div>
-      <div className="relative">
-        <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 auto-rows-auto lg:gap-5 max-w-[1366px] w-[90%] mx-auto">
-          {/* Column 1 */}
-          <div>
-            {columnOne.map((review, index) => (
-              <ReviewCard key={index} review={review} />
-            ))}
+        <div className="relative">
+          <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
+            <ScrollingColumn reviewsList={reviewsList} speed={1} />
+            <ScrollingColumn reviewsList={reviewsList} speed={1.8} />
+            <ScrollingColumn reviewsList={reviewsList} speed={2} />
           </div>
-          {/* Column 2 */}
-          <div>
-            {columnTwo.map((review, index) => (
-              <ReviewCard key={index} review={review} />
-            ))}
-          </div>
-          {/* Column 3 */}
-          <div>
-            {columnThree.map((review, index) => (
-              <ReviewCard key={index} review={review} />
-            ))}
-          </div>
+          <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 bottom-0 z-[1]"></div>
         </div>
-        <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 bottom-0 z-[1]"></div>
       </div>
     </section>
   );
 };
 
+const ScrollingColumn = ({ reviewsList, speed }) => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let animationFrame;
+
+    const scrollContent = () => {
+      if (scrollContainer.scrollTop >= scrollContainer.scrollHeight / 2) {
+        scrollContainer.scrollTop = 0; // Reset scroll to create loop
+      }
+      scrollContainer.scrollTop += speed; // Scroll incrementally based on speed
+      animationFrame = requestAnimationFrame(scrollContent);
+    };
+
+    animationFrame = requestAnimationFrame(scrollContent);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [speed]);
+
+  return (
+    <div ref={scrollRef} className="overflow-hidden h-[800px]">
+      <div className="flex flex-col">
+        {reviewsList.concat(reviewsList).map((review, index) => (
+          <ReviewCard key={index} review={review} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const ReviewCard = ({ review }) => (
-  <div
-    className="border border-[rgba(255,255,255,0.10)] bg-custom-gradient-two p-5 xl:p-8 rounded-[20px] relative mb-5"
-    data-aos="zoom-in"
-    data-aos-duration="2500"
-  >
-    <div className="bg-custom-radial-gradient-two absolute left-0 top-0 h-[1px] w-full -z-[1]"></div>
+  <div className="border border-[rgba(255,255,255,0.10)] bg-custom-gradient-two p-5 xl:p-8 rounded-[20px] relative mb-5">
     <div className="flex items-center justify-between mb-5 xl:mb-7">
-      <div className="flex items-center justify-between gap-2.5">
+      <div className="flex items-center gap-2.5">
         <img src={review.thumbnail} alt="profile" />
         <span className="text-lg xl:text-xl font-medium text-white leading-none opacity-60">
           {review.title}

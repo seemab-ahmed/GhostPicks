@@ -10,7 +10,7 @@ const Work = () => {
     <main>
       <WorkBanner />
       <HowItWorks />
-      <Funded />
+      <Funded account={true} profit={true} referrals={false} />
       <Reviews />
       <JoinUs />
     </main>

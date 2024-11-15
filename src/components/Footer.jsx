@@ -23,9 +23,9 @@ const socialList = [
 ];
 
 const footerNavLinks = [
-  { name: "Terms & Conditions", path: "/" },
-  { name: "Privacy Policy", path: "/" },
-  { name: "Refund Policy", path: "/" },
+  { name: "Terms & Conditions", path: "/terms&conditions" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Refund Policy", path: "/refund-policy" },
   { name: "Affiliates", path: "/" },
   { name: "FAQ", path: "/" },
   { name: "Sports Picker Assessment", path: "/" },

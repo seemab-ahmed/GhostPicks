@@ -124,6 +124,10 @@
 
 /* global css start */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -247,5 +251,3 @@ img {
     #ad7e38 100%
   );
 }
-
-/* sports css end */
