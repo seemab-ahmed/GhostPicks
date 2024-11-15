@@ -89,7 +89,7 @@ const Reviews = () => {
           <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 top-0 z-[1] rotate-180"></div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 overflow-hidden">
             <ScrollingColumn reviewsList={reviewsList} speed={1} />
-            <ScrollingColumn reviewsList={reviewsList} speed={1.8} />
+            <ScrollingColumn reviewsList={reviewsList} speed={1.5} />
             <ScrollingColumn reviewsList={reviewsList} speed={2} />
           </div>
           <div className="bg-custom-black-two-gradient h-[266px] w-full absolute left-0 bottom-0 z-[1]"></div>
